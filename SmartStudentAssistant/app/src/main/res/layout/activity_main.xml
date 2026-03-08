@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/starting_screen"
+    android:background="@drawable/gradient_bg_one"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartingActivity">
+
+    <ImageView
+        android:id="@+id/student_logo_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_260"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splash_one"
+        app:layout_constraintBottom_toTopOf="@+id/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/norican"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/font_5"
+        android:text="digital Student assistant"
+        android:textColor="@color/black"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/font_26"
+        android:layout_marginTop="@dimen/dimen_6"
+        app:layout_constraintBottom_toTopOf="@+id/app_name_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_logo_one" />
+
+    <TextView
+        android:id="@+id/app_name_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/norican"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.04"
+        android:padding="@dimen/font_5"
+        android:text="Smart helper to organize your Study works and Study tasks"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_25"
+        android:layout_marginBottom="@dimen/dimen_8"
+        app:layout_constraintBottom_toTopOf="@+id/student_logo_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+    <ImageView
+        android:id="@+id/student_logo_two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_260"
+        android:src="@drawable/splash_two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name_hint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Smart Student Assistant</string>
+
+
+    <string name="book_title">book title</string>
+    <string name="author">author :</string>
+    <string name="edition">edition</string>
+
+    <string name="reminder_name">Reminder Title</string>
+    <string name="reminder_time">Reminder Time :</string>
+    <string name="date_10_12_2025">10 12 2025</string>
+    <string name="_12_00_am">12 : 00 AM</string>
+    <string name="category_name">Category :</string>
+    <string name="status">Status :</string>
+
+</resources>

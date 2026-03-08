@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboard_three"
+    android:background="@drawable/gradient_bg_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onboardingsui.IntroActivity3">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/study_book_img"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_200"
+        android:layout_gravity="center"
+        android:src="@drawable/file_scan_img"
+        app:layout_constraintBottom_toTopOf="@+id/study_books_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/study_books_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/niconne"
+        android:text="Scan your notes images to create documents"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_25"
+        app:layout_constraintBottom_toTopOf="@+id/cal_grade_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/study_book_img" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cal_grade_img"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_200"
+        android:layout_gravity="center"
+        android:src="@drawable/text_recognize_img"
+        app:layout_constraintBottom_toTopOf="@+id/grade_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/study_books_txt" />
+
+    <TextView
+        android:id="@+id/grade_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/niconne"
+        android:text="Encode your notes images into editable text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_25"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cal_grade_img" />
+
+    <Button
+        android:id="@+id/btn_next_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/lily_script_one"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:text="Next"
+        android:textSize="@dimen/font_25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grade_txt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

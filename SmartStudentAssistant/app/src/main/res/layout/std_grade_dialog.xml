@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dimen_360"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/gradient_bg_two"
+    android:paddingBottom="@dimen/dimen_10"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/std_grade_txts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:paddingStart="@dimen/font_5"
+        android:paddingEnd="@dimen/font_5"
+        android:text="Your Exam Result"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_total_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:layout_marginEnd="@dimen/dimen_5"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:text="Grade Score :"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintEnd_toStartOf="@+id/txt_total_gpa"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/std_grade_txts" />
+
+    <TextView
+        android:id="@+id/txt_total_gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_5"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:text="4.0 GPA"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toEndOf="@id/txt_total_score"
+        app:layout_constraintTop_toBottomOf="@+id/std_grade_txts" />
+
+    <TextView
+        android:id="@+id/txt_your_gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:text="Your Score :"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintEnd_toStartOf="@+id/txt_obtained_gpa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_total_score" />
+
+    <TextView
+        android:id="@+id/txt_obtained_gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:text="4.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintEnd_toStartOf="@+id/txt_gpa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_your_gpa"
+        app:layout_constraintTop_toBottomOf="@+id/txt_total_gpa" />
+
+    <TextView
+        android:id="@+id/txt_gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_7"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:text="GPA"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_obtained_gpa"
+        app:layout_constraintTop_toBottomOf="@+id/txt_total_gpa" />
+
+    <TextView
+        android:id="@+id/txt_grade_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_7"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:text="Your Grade :"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintEnd_toStartOf="@+id/txt_grade_value"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_your_gpa" />
+
+    <TextView
+        android:id="@+id/txt_grade_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:text="Grade"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_grade_status"
+        app:layout_constraintTop_toBottomOf="@+id/txt_obtained_gpa" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="@dimen/dimen_15"
+    app:cardBackgroundColor="#B3E5FC">
+
+    <RelativeLayout
+        android:id="@+id/layout_books_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_subject_name"
+            android:layout_width="@dimen/dimen_350"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:fontFamily="@font/norican"
+            android:text="Subject name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_18"
+            android:layout_alignParentTop="true"
+            android:letterSpacing="0.06"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/txt_book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_subject_name"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:fontFamily="@font/norican"
+            android:text="book title :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_17"
+            android:letterSpacing="0.05"
+            />
+
+        <TextView
+            android:id="@+id/txt_book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginStart="@dimen/dimen_6"
+            android:layout_below="@+id/txt_subject_name"
+            android:layout_toEndOf="@+id/txt_book_title"
+            android:fontFamily="@font/norican"
+            android:text="the_book_name_is_given"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_17"
+            android:letterSpacing="0.06"
+            android:maxLines="1"
+            />
+
+        <TextView
+            android:id="@+id/txt_author_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_book_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:fontFamily="@font/norican"
+            android:text="author :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_17"
+            android:letterSpacing="0.06"
+            />
+
+        <TextView
+            android:id="@+id/txt_writer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginStart="@dimen/dimen_6"
+            android:layout_below="@+id/txt_book_name"
+            android:layout_toEndOf="@+id/txt_author_title"
+            android:fontFamily="@font/norican"
+            android:text="the_writer_name_is_given"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_17"
+            android:letterSpacing="0.06"
+            android:maxLines="1"
+            />
+
+        <TextView
+            android:id="@+id/txt_edition_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_author_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:fontFamily="@font/norican"
+            android:text="edition :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_17"
+            android:letterSpacing="0.06"
+            />
+
+        <TextView
+            android:id="@+id/txt_edition_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginStart="@dimen/dimen_6"
+            android:layout_below="@+id/txt_writer_name"
+            android:layout_toEndOf="@+id/txt_edition_title"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:fontFamily="@font/norican"
+            android:text="book_edition"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_17"
+            android:letterSpacing="0.06"
+            android:maxLines="1"
+            />
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+

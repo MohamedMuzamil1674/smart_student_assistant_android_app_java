@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/books_screen"
+    android:orientation="vertical"
+    android:background="#A9D4F8F4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".booksearchings.BooksActivity">
+
+    <TextView
+        android:id="@+id/student_books_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/norican"
+        android:padding="@dimen/font_5"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:text="Study books Library"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_25"
+        android:letterSpacing="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rview_books"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0"
+        tools:ignore="SpeakableTextPresentCheck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_books_txt"
+        app:layout_constraintVertical_bias="0.001" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

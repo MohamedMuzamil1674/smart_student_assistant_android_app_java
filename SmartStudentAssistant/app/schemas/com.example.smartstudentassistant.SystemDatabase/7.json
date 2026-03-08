@@ -1,0 +1,139 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 7,
+    "identityHash": "5fae6aeaa4ac9288aafdbf8ed20f749d",
+    "entities": [
+      {
+        "tableName": "Grades",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`GradeId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ExamType` TEXT NOT NULL, `Total_Marks` INTEGER NOT NULL, `Exam_Marks` INTEGER NOT NULL, `Grade_Status` TEXT NOT NULL, `Total_GPA` REAL NOT NULL, `Exam_GPA` REAL NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "GradeId",
+            "columnName": "GradeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ExamType",
+            "columnName": "ExamType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Total_Marks",
+            "columnName": "Total_Marks",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Exam_Marks",
+            "columnName": "Exam_Marks",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Grade_Status",
+            "columnName": "Grade_Status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Total_GPA",
+            "columnName": "Total_GPA",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Exam_GPA",
+            "columnName": "Exam_GPA",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "GradeId"
+          ]
+        }
+      },
+      {
+        "tableName": "DriveNotes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`NotesId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Subject` TEXT NOT NULL, `NotesLink` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "NotesId",
+            "columnName": "NotesId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Subject",
+            "columnName": "Subject",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "NotesLink",
+            "columnName": "NotesLink",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "NotesId"
+          ]
+        }
+      },
+      {
+        "tableName": "Books",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`BookId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `SubjectName` TEXT NOT NULL, `BookName` TEXT NOT NULL, `Author` TEXT NOT NULL, `Edition` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "BookId",
+            "columnName": "BookId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "SubjectName",
+            "columnName": "SubjectName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "BookName",
+            "columnName": "BookName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Author",
+            "columnName": "Author",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Edition",
+            "columnName": "Edition",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "BookId"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5fae6aeaa4ac9288aafdbf8ed20f749d')"
+    ]
+  }
+}

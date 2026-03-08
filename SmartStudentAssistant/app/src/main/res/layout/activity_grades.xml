@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grades_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".gradesearching.GradesActivity">
+
+    <TextView
+        android:id="@+id/students_grade_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/norican"
+        android:letterSpacing="0.06"
+        android:padding="@dimen/font_5"
+        android:text="Exams Score Checker"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_25"
+        app:layout_constraintBottom_toTopOf="@+id/std_grades_library"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/std_grades_library"
+        android:layout_width="@dimen/dimen_240"
+        android:layout_height="@dimen/dimen_230"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:src="@drawable/calculate_gpa"
+        app:layout_constraintBottom_toTopOf="@+id/Layout_obtain_marks"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/students_grade_txt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Layout_obtain_marks"
+        android:layout_width="@dimen/dimen_360"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/dimen_15"
+        app:boxCornerRadiusBottomStart="@dimen/dimen_15"
+        app:boxCornerRadiusTopEnd="@dimen/dimen_15"
+        app:boxCornerRadiusTopStart="@dimen/dimen_15"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="@dimen/dimen_2"
+        app:boxStrokeWidthFocused="@dimen/dimen_2"
+        app:counterEnabled="true"
+        app:counterMaxLength="3"
+        app:counterTextAppearance="@style/CounterTextStyle"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/ErrorTextStyle"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_search_grade"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/std_grades_library">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_obtain_marks"
+            android:layout_width="@dimen/dimen_360"
+            android:layout_height="match_parent"
+            android:fontFamily="cursive"
+            android:hint="Exam Marks"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_20"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_search_grade"
+        android:layout_width="@dimen/dimen_280"
+        android:layout_height="@dimen/dimen_55"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:backgroundTint="#2196F3"
+        android:fontFamily="cursive"
+        android:letterSpacing="0.1"
+        android:text="Find Your Score"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Layout_obtain_marks"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

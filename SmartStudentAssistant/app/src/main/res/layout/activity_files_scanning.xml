@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/files_scanner_scr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".filesscannings.FilesScanner">
+
+    <TextView
+        android:id="@+id/docs_scan_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/norican"
+        android:letterSpacing="0.06"
+        android:padding="@dimen/dimen_4"
+        android:text="Image to document Scanning"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_22"
+        app:layout_constraintBottom_toTopOf="@+id/docs_scan_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/docs_scan_img"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_180"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:contentDescription="Image design for document Scan"
+        android:src="@drawable/file_scan_img"
+        app:layout_constraintBottom_toTopOf="@+id/layout_file_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/docs_scan_txt" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_file_name"
+        style="@style/LayoutBoxStyle"
+        android:layout_width="@dimen/dimen_360"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/ErrorTextStyle"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_scanning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/docs_scan_img">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_file_name"
+            android:layout_width="@dimen/dimen_360"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/satisfy"
+            android:hint="File Name"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_20" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_start_scanning"
+        android:layout_width="@dimen/dimen_300"
+        android:layout_height="@dimen/dimen_55"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:backgroundTint="#485EE2"
+        android:fontFamily="@font/norican"
+        android:letterSpacing="0.08"
+        android:text="Start image Scanner"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_file_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

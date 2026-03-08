@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notes_drive_screen"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_interface_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dimen_25"
+        android:fontFamily="@font/kaisei_opti_bold"
+        android:padding="@dimen/font_5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Smart Student Assistant"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_20" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/user_welcome_image"
+        android:layout_width="@dimen/dimen_300"
+        android:layout_height="@dimen/dimen_180"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/reminder_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_interface_txt" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_books_icon"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="@dimen/dimen_110"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:cardBackgroundColor="#B2DFDB"
+        app:cardCornerRadius="@dimen/dimen_15"
+        app:layout_constraintEnd_toStartOf="@+id/card_grades_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_welcome_image">
+
+        <RelativeLayout
+            android:id="@+id/books_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_4"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_books"
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/study_books" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_books"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:fontFamily="@font/kaisei_opti_bold"
+                android:gravity="center"
+                android:text="Books Library"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_12" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_grades_icon"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="@dimen/dimen_110"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:cardBackgroundColor="#B2DFDB"
+        app:cardCornerRadius="@dimen/dimen_15"
+        app:layout_constraintEnd_toStartOf="@+id/card_tasks_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/card_books_icon"
+        app:layout_constraintTop_toBottomOf="@+id/user_welcome_image">
+
+        <RelativeLayout
+            android:id="@+id/grades_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_4"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_grades"
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/grade_trophy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_grades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_grades"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:fontFamily="@font/kaisei_opti_bold"
+                android:gravity="center"
+                android:text="Grade Search"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_12" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_tasks_icon"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="@dimen/dimen_110"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:cardBackgroundColor="#B2DFDB"
+        app:cardCornerRadius="@dimen/dimen_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/card_grades_icon"
+        app:layout_constraintTop_toBottomOf="@+id/user_welcome_image">
+
+        <RelativeLayout
+            android:id="@+id/tasks_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_4"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_tasks"
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/todo_list" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_tasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_tasks"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:fontFamily="@font/kaisei_opti_bold"
+                android:gravity="center"
+                android:text="Todo Activity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_12" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/notes_cards_icon"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="@dimen/dimen_110"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:cardBackgroundColor="#B2DFDB"
+        app:cardCornerRadius="@dimen/dimen_15"
+        app:layout_constraintEnd_toStartOf="@+id/encode_cards_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_books_icon">
+
+        <RelativeLayout
+            android:id="@+id/notes_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_4"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_notes"
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/note_book_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_notes"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:fontFamily="@font/kaisei_opti_bold"
+                android:gravity="center"
+                android:text="Notes Library"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_12" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/encode_cards_icon"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="@dimen/dimen_110"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:cardBackgroundColor="#B2DFDB"
+        app:cardCornerRadius="@dimen/dimen_15"
+        app:layout_constraintEnd_toStartOf="@+id/scan_cards_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notes_cards_icon"
+        app:layout_constraintTop_toBottomOf="@+id/card_grades_icon">
+
+        <RelativeLayout
+            android:id="@+id/alarm_card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_4"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_alarms"
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/scanning" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_alarms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_alarms"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:fontFamily="@font/kaisei_opti_bold"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Image Content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_12" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/scan_cards_icon"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="@dimen/dimen_110"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:cardBackgroundColor="#B2DFDB"
+        app:cardCornerRadius="@dimen/dimen_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/encode_cards_icon"
+        app:layout_constraintTop_toBottomOf="@+id/card_tasks_icon">
+
+        <RelativeLayout
+            android:id="@+id/scan_cards_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_4"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_ocr"
+                android:layout_width="@dimen/dimen_55"
+                android:layout_height="@dimen/dimen_55"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/scanning" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_ocr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_ocr"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:fontFamily="@font/kaisei_opti_bold"
+                android:gravity="center"
+                android:text="Files Scanner"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_12" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
